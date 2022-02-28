@@ -1,24 +1,26 @@
+{{block.settings.bar_style_aligment}}
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="announcement">
   <div class="backdrop"></div>
+  <div class="bar_content margin_x" style="font-family:{{block.settings.textarea_font.family}}; font-size:{{block.settings.textarea_font_size}}px" >
+    <i class="{{block.settings.icon_alignment}}" style="font-size:{{block.settings.icon_font_size}}px;color:{{block.settings.icon_color}}"></i>
+    <div style="color:{{block.settings.bar_text_color}}">
+      {{block.settings.bar_content}}
+    </div>
+    <i class="{{block.settings.icon_alignment}}" style="font-size:{{block.settings.icon_font_size}}px;color:{{block.settings.icon_color}}"></i>
+  </div>
   <div class="btn_container">
-    <a href="{{section.settings.btn_link}}">
+    <a href="{{block.settings.btn_link}}">
       <button 
         class="announcement_btn margin_x"
         role="button"
-        style= "color:{{section.settings.btn_text_color}};background-color: {{section.settings.btn_background_color}};  border: 2px {{section.settings.btn_border_color}} {{section.settings.btn_border_style}};border-radius:{{section.settings.top_left}}px {{section.settings.top_right}}px {{section.settings.bottom_right}}px {{section.settings.bottom_left}}px"
+        style= "color:{{block.settings.btn_text_color}};background-color: {{block.settings.btn_background_color}};  border: 2px {{block.settings.btn_border_color}} {{block.settings.btn_border_style}};border-radius:{{block.settings.top_left}}px {{block.settings.top_right}}px {{block.settings.bottom_right}}px {{block.settings.bottom_left}}px"
                       >
-                      {{section.settings.btn_text}}
+                      {{block.settings.btn_text}}
           </button>
         </a>
   </div>
-  <div class="bar_content margin_x" style="font-family:{{section.settings.textarea_font.family}}; font-size:{{section.settings.textarea_font_size}}px" >
-    <i class="{{section.settings.icon_alignment}}" style="font-size:{{section.settings.icon_font_size}}px;color:{{section.settings.icon_color}}"></i>
-    <div style="color:{{section.settings.bar_text_color}}">
-      {{section.settings.bar_content}}
-    </div>
-    <i class="{{section.settings.icon_alignment}}" style="font-size:{{section.settings.icon_font_size}}px;color:{{section.settings.icon_color}}"></i>
-</div>
 </div>
 
 
@@ -70,10 +72,10 @@
                     "id": "bar_background_position",
                     "min": 0,
                     "max": 100,
-                    "step": 4,
+                    "step": 2,
                     "unit": "%",
                     "label": "background Position",
-                    "default": 4
+                    "default": 50
                   },
                   {
                         "type": "color",
@@ -177,6 +179,10 @@
                         "type": "image_picker",
                         "id": "bar_bgr_image",
                         "label": "Background image"
+                  },
+                  {
+                    "type": "header",
+                    "content": "Text Settings"
                   },
                   {
                     "type": "richtext",
@@ -367,6 +373,10 @@
                             "default": "#ffffff"
                         },
                         {
+                          "type": "header",
+                          "content": "Button Settings"
+                        },
+                        {
                           "type": "text",
                           "id": "btn_text",
                           "label": "Button Text",
@@ -449,14 +459,14 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        {% if section.settings.bar_style_aligment == "color" %}
-          background-color: {{section.settings.content_background_color}};
-        {% elsif section.settings.bar_style_aligment == "embeded" %}
-          background: url("{{section.settings.Background_aligment}}");
-        {% elsif section.settings.bar_style_aligment == "picker" %}
-          background: url("https:{{section.settings.bar_bgr_image | img_url: 'large'}}");
+        {% if block.settings.bar_style_aligment == "color" %}
+          background-color: {{block.settings.content_background_color}};
+        {% elsif block.settings.bar_style_aligment == "embeded" %}
+          background: url("{{block.settings.Background_aligment}}");
+        {% elsif block.settings.bar_style_aligment == "picker" %}
+          background: url("https:{{block.settings.bar_bgr_image | img_url: 'large'}}");
         {%- endif -%}
-        background-position: 50% {{section.settings.bar_background_position}}%;
+        background-position: 50% {{block.settings.bar_background_position}}%;
         background-repeat:no-repeat;
         background-size: cover;
         color: white; 
@@ -479,7 +489,7 @@
         margin:5px
     }
     .btn_container{
-      z-index:2
+      z-index:2;
     }
     .announcement_btn {
       border: none;
@@ -508,7 +518,7 @@
       left:0px;
       bottom:0px;
       z-index:2;
-      opacity:{{section.settings.bar_opacity_size}} 
+      opacity:{{block.settings.bar_opacity_size}} 
     }
     
     @media only screen and (max-width: 600px) {
