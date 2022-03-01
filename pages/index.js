@@ -31,7 +31,7 @@ export default function Index() {
                   window.open(url, "_blank");
                 }}
               >
-                deep Link   
+                Start Editing App   
               </button>
             </div>
           );

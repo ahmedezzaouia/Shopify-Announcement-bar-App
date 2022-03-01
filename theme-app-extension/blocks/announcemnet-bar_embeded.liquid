@@ -5,7 +5,7 @@
   <div class="backdrop"></div>
   <div class="bar_content margin_x" style="font-family:{{block.settings.textarea_font.family}}; font-size:{{block.settings.textarea_font_size}}px" >
     <i class="{{block.settings.icon_alignment}}" style="font-size:{{block.settings.icon_font_size}}px;color:{{block.settings.icon_color}}"></i>
-    <div style="color:{{block.settings.bar_text_color}}">
+    <div >
       {{block.settings.bar_content}}
     </div>
     <i class="{{block.settings.icon_alignment}}" style="font-size:{{block.settings.icon_font_size}}px;color:{{block.settings.icon_color}}"></i>
@@ -205,7 +205,7 @@
                 {
                     "type": "number",
                     "id": "textarea_font_size",
-                    "label": "Border Radius : Top Right",
+                    "label": "Text Font Size",
                     "default":  17
                 },
                 {
@@ -483,11 +483,14 @@
         align-items: center;
         justify-content: center;
         z-index:2;
-    }
-    
-    .bar_content i{
+      }
+      
+      .bar_content i{
         margin:5px
-    }
+      }
+      .bar_content p{
+        color:{{block.settings.bar_text_color}}
+      }
     .btn_container{
       z-index:2;
     }
@@ -520,7 +523,6 @@
       z-index:2;
       opacity:{{block.settings.bar_opacity_size}} 
     }
-    
     @media only screen and (max-width: 600px) {
         .bar_content {
          width:100%;
