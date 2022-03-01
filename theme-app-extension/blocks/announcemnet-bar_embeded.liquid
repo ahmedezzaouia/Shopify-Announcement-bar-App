@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="announcement">
   <div class="backdrop"></div>
-  <div class="bar_content margin_x" style="font-family:{{block.settings.textarea_font.family}}; font-size:{{block.settings.textarea_font_size}}px" >
+  <div class="bar_content margin_x">
     <i class="{{block.settings.icon_alignment}}" style="font-size:{{block.settings.icon_font_size}}px;color:{{block.settings.icon_color}}"></i>
     <div >
       {{block.settings.bar_content}}
@@ -489,7 +489,9 @@
         margin:5px
       }
       .bar_content p{
-        color:{{block.settings.bar_text_color}}
+        color:{{block.settings.bar_text_color}};
+        font-family:{{block.settings.textarea_font.family}};
+        font-size:{{block.settings.textarea_font_size}}px;
       }
     .btn_container{
       z-index:2;
