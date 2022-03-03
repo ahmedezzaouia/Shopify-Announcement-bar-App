@@ -1,39 +1,15 @@
-# Shopify App Node
+# Shopify Announcement bar App
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
-[![Build Status](https://travis-ci.com/Shopify/shopify-app-node.svg?branch=master)](https://travis-ci.com/Shopify/shopify-app-node)
 
-Boilerplate to create an embedded Shopify app made with Node, [Next.js](https://nextjs.org/), [Shopify-koa-auth](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-auth), [Polaris](https://github.com/Shopify/polaris-react), and [App Bridge React](https://shopify.dev/tools/app-bridge/react-components).
+if you’re looking for a way to share site-wide messages that can increase your conversion and engagement rates and ultimately influence your sales and leads. you should consider adding an announcement bar to your Shopify Store.
 
-## Installation
+I've seen a lot of paid apps on Shopify App Store that add an announcement bar to the store. They are limited in terms of customization, For that, I built a new one with Shopify app Extension that allows merchants to easily edit The app in the store editor.
 
-Using the [Shopify CLI](https://github.com/Shopify/shopify-cli) run:
+Here is what the My App include : 
 
-```sh
-~/ $ shopify app create node -n APP_NAME
-```
+✅ 21 backgrounds to use <br/>
+✅ 40 most used icons <br/>
+✅ Option to upload your own background images <br/>
+✅ Everything is customizable: Button, Text, Fonts, Size… <br/>
 
-Or, fork and clone repo
-
-## Requirements
-
-- If you don’t have one, [create a Shopify partner account](https://partners.shopify.com/signup).
-- If you don’t have one, [create a Development store](https://help.shopify.com/en/partners/dashboard/development-stores#create-a-development-store) where you can install and test your app.
-- In the Partner dashboard, [create a new app](https://help.shopify.com/en/api/tools/partner-dashboard/your-apps#create-a-new-app). You’ll need this app’s API credentials during the setup process.
-
-## Usage
-
-This repository is used by [Shopify CLI](https://github.com/Shopify/shopify-cli) as a scaffold for Node apps. You can clone or fork it yourself, but it’s faster and easier to use Shopify App CLI, which handles additional routine development tasks for you.
-
-## Updates
-
-### [Coming soon] Replace Next.js and Koa with Express.js
-
-We will be moving to [Express](https://expressjs.com/) to keep Shopify's framework usage consistent.
-Our sample app currently uses both Koa and Next.js which makes the server-side unnecessarily complex to use and maintain.
-
-Try it out with this command, understanding that things may not be totally stable yet: `npx degit shopify/shopify-app-node#sample_app_updates`.
-
-## License
-
-This repository is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+<a href="https://www.linkedin.com/posts/ahmed-ezzaouia_sales-engagement-share-activity-6904508738359934976-P_8c">Live Video</a>
